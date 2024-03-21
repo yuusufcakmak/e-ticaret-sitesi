@@ -19,9 +19,7 @@ const Header = () => {
               <i className="bi bi-list" id="btn-menu"></i>
             </div>
             <div className="header-left">
-              <a href="index.html" className="logo">
-                <img src="img/mega-menu.jpg" alt="" />
-              </a>
+              <a href="index.html" className="logo"></a>
             </div>
             <div className="header-center" id="sidebar">
               <nav className="navigation">
