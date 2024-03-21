@@ -20,7 +20,7 @@ const Header = () => {
             </div>
             <div className="header-left">
               <a href="index.html" className="logo">
-                LOGO
+                <img src="img/mega-menu.jpg" alt="" />
               </a>
             </div>
             <div className="header-center" id="sidebar">
