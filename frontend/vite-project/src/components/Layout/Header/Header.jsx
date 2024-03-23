@@ -1,4 +1,4 @@
-import "../components/Header.css";
+import "../Header/Header.css";
 
 const Header = () => {
   return (
@@ -32,13 +32,13 @@ const Header = () => {
                     <div className="menu-dropdown-wrapper">
                       <ul className="menu-dropdown-content">
                         <li>
-                          <a href="#">Home Clean</a>
+                          <a href="#">Ev Temizliği</a>
                         </li>
                         <li>
-                          <a href="#">Home Collection</a>
+                          <a href="#">Eviniz için koleksiyon</a>
                         </li>
                         <li>
-                          <a href="#">Home Minimal</a>
+                          <a href="#">Minimal</a>
                         </li>
                         <li>
                           <a href="#">Home Modern</a>
