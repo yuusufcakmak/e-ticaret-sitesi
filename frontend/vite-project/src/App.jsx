@@ -1,3 +1,4 @@
+import Campaigns from "./components/Campaigns/Campaigns";
 import Categories from "./components/Categories/Categories";
 import Footer from "./components/Layout/Footer/Footer";
 import Header from "./components/Layout/Header/Header";
@@ -11,6 +12,8 @@ function App() {
       <Header />
       <Sliders />
       <Categories />
+      <Products />
+      <Campaigns />
       <Products />
       <Policy />
       <Footer />
