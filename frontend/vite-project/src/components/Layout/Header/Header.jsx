@@ -152,17 +152,15 @@ const Header = () => {
                           <a href="#">
                             <img src="img/mega-menu.jpg" alt="" />
                           </a>
-                          <h3 className="megamenu-single-title">
-                            JOIN THE LAYERING GANG
-                          </h3>
+                          <h3 className="megamenu-single-title">Şimdi Başla</h3>
                           <h4 className="megamenu-single-subtitle">
-                            Suspendisse faucibus nunc et pellentesque
+                            asdasdasdsa
                           </h4>
                           <a
                             href="#"
                             className="megamenu-single-button btn btn-sm"
                           >
-                            Shop Now
+                            Alışverişe Başla
                           </a>
                         </div>
                       </div>
