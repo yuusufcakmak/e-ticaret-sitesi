@@ -7,6 +7,7 @@ import Products from "./components/Products/Products";
 import Sliders from "./components/Slider/Sliders";
 import "./App.css";
 import Blogs from "./components/Blogs/Blogs";
+import Brands from "./components/Brands/Brands";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       <Campaigns />
       <Products />
       <Blogs />
+      <Brands />
       <Policy />
       <Footer />
     </>
