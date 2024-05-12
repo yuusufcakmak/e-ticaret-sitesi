@@ -8,6 +8,7 @@ import Sliders from "./components/Slider/Sliders";
 import "./App.css";
 import Blogs from "./components/Blogs/Blogs";
 import Brands from "./components/Brands/Brands";
+import CampaignSingle from "./components/CampaignSingle/CampaignSingle";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
       <Products />
       <Blogs />
       <Brands />
+      <CampaignSingle />
       <Policy />
       <Footer />
     </>
