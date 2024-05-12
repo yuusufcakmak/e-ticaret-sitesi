@@ -6,6 +6,7 @@ import Policy from "./components/Layout/Policy/Policy";
 import Products from "./components/Products/Products";
 import Sliders from "./components/Slider/Sliders";
 import "./App.css";
+import CampaignSingle from "./components/CampaignSingle/CampaignSingle";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
       <Products />
       <Campaigns />
       <Products />
+      <CampaignSingle />
       <Policy />
       <Footer />
     </>
