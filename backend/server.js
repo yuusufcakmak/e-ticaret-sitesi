@@ -1,11 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 const app = express();
 const port = 5000;
 
+dotenv.config();
+
 const connect = async () => {
     try {
-        await mongoose.connect("mongodb+srv://yusel-e-commerce:ZBL8AFSOq03kzxpw@e-commerce.iajdzyy.mongodb.net/")
+        await mongoose.connect(process.env.MONGO_URI);
         console.log("connected to mongoDb");
     } catch (error) {
         throw error;
@@ -16,7 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api", (req, res) => {
-    res.send("this is bu api route");
+    res.send("this is api route");
 })
 
 app.listen(port, () => {
