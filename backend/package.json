@@ -1,5 +1,5 @@
 {
-  "name": "e-commerce-backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
