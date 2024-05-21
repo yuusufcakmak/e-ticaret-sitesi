@@ -1,13 +1,19 @@
-import HomePage from "./pages/HomePage";
 import React from "react";
+// import HomePage from "./pages/HomePage";
+// import ShopPage from "./pages/ShopPage";
 import "./App.css";
-import { MdContactPage } from "react-icons/md";
+// import AuthPage from "./pages/AuthPage";
+import CartPage from "./pages/CartPage";
+// import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
     <React.Fragment>
-      <HomePage />
-      <MdContactPage />
+      {/* <HomePage /> */}
+      {/* <ShopPage /> */}
+      {/* <ContactPage /> */}
+      {/* <AuthPage /> */}
+      <CartPage />
     </React.Fragment>
   );
 }
