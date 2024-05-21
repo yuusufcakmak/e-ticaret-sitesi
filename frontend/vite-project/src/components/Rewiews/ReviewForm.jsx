@@ -2,7 +2,7 @@ const ReviewForm = () => {
   return (
     <form className="comment-form">
       <p className="comment-notes">
-        Your email address will not be published. Required fields are marked
+        E-posta hesabınız yayımlanmayacak. Gerekli alanlar işaretlendi
         <span className="required">*</span>
       </p>
       <div className="comment-form-rating">
@@ -62,8 +62,8 @@ const ReviewForm = () => {
       <div className="comment-form-cookies">
         <input id="cookies" type="checkbox" />
         <label htmlFor="cookies">
-          Save my name, email, and website in this browser for the next time I
-          comment.
+          Bir dahaki sefere kullandığımda kullanılmak üzere adımı, e-posta
+          adresimi ve web site adresimi bu tarayıcıya kaydet
           <span className="required">*</span>
         </label>
       </div>
