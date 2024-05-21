@@ -1,12 +1,13 @@
 const Login = () => {
   return (
     <div className="account-column">
-      <h2>Login</h2>
+      <h2>Giriş Yap</h2>
       <form>
         <div>
           <label>
             <span>
-              Username or email address <span className="required">*</span>
+              Kullanıcı Adı yada E-posta Adresi{" "}
+              <span className="required">*</span>
             </span>
             <input type="text" />
           </label>
@@ -14,7 +15,7 @@ const Login = () => {
         <div>
           <label>
             <span>
-              Password <span className="required">*</span>
+              şifre <span className="required">*</span>
             </span>
             <input type="password" />
           </label>
@@ -22,12 +23,12 @@ const Login = () => {
         <p className="remember">
           <label>
             <input type="checkbox" />
-            <span>Remember me</span>
+            <span>Beni Hatırla</span>
           </label>
-          <button className="btn btn-sm">Login</button>
+          <button className="btn btn-sm">Giriş Yap</button>
         </p>
         <a href="#" className="form-link">
-          Lost your password?
+          Parolanızı mı unuttunuz?
         </a>
       </form>
     </div>

@@ -14,16 +14,16 @@ const BlogDetails = () => {
           <div className="blog-wrapper">
             <div className="blog-meta">
               <div className="blog-category">
-                <a href="#">COLLECTION</a>
+                <a href="#">Koleksiyon</a>
               </div>
               <div className="blog-date">
-                <a href="#">April 25, 2022</a>
+                <a href="#">25 Nisan 2022</a>
               </div>
               <div className="blog-tags">
-                <a href="#">products</a>,<a href="#">coats</a>
+                <a href="#">Ürünler</a>,<a href="#">coats</a>
               </div>
             </div>
-            <h1 className="blog-title">The Best Products That Shape Fashion</h1>
+            <h1 className="blog-title">En iyi Ürünler...</h1>
             <div className="blog-content">
               <p>
                 Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque,
