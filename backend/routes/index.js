@@ -10,3 +10,4 @@ router.use("/categories",categoryRoute);
 router.use("/products",productRoute);
 
 module.exports=router;
+// postman kurulumu tamamlandı
