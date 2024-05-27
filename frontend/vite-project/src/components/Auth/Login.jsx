@@ -15,7 +15,7 @@ const Login = () => {
         <div>
           <label>
             <span>
-              şifre <span className="required">*</span>
+              Şifre <span className="required">*</span>
             </span>
             <input type="password" />
           </label>

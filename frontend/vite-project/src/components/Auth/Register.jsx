@@ -29,10 +29,9 @@ const Register = () => {
         </div>
         <div className="privacy-policy-text remember">
           <p>
-            Kişisel verileriniz deneyiminasdasdizi desteklemek için
-            kullanılacaktır Bu web sitesi sdasdgenelinde, hesabısdsanıza erişimi
-            yönetmek ve belgemizde açıklanan diğer amaçlar{" "}
-            <a href="#">Gizlilik politikalarımız.</a>
+            Kişisel verileriniz deneyiminizi desteklemek için kullanılacaktır Bu
+            web sitesi genelinde,hesabınıza erişimi yönetmek ve belgemizde
+            açıklanan diğer amaçlar <a href="#">Gizlilik politikalarımız.</a>
           </p>
           <button className="btn btn-sm">Kaydol</button>
         </div>
