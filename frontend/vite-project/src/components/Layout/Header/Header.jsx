@@ -1,6 +1,7 @@
-import "../Header/Header.css";
+import "./Header.css";
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ setIsSearchShow }) => {
   return (
     <header>
       <div className="global-notification">
@@ -19,7 +20,9 @@ const Header = () => {
               <i className="bi bi-list" id="btn-menu"></i>
             </div>
             <div className="header-left">
-              <a href="index.html" className="logo"></a>
+              <a href="index.html" className="logo">
+                LOGO
+              </a>
             </div>
             <div className="header-center" id="sidebar">
               <nav className="navigation">
@@ -32,13 +35,13 @@ const Header = () => {
                     <div className="menu-dropdown-wrapper">
                       <ul className="menu-dropdown-content">
                         <li>
-                          <a href="#">Ev Temizliği</a>
+                          <a href="#">Home Clean</a>
                         </li>
                         <li>
-                          <a href="#">Eviniz için koleksiyon</a>
+                          <a href="#">Home Collection</a>
                         </li>
                         <li>
-                          <a href="#">Minimal</a>
+                          <a href="#">Home Minimal</a>
                         </li>
                         <li>
                           <a href="#">Home Modern</a>
@@ -152,15 +155,17 @@ const Header = () => {
                           <a href="#">
                             <img src="img/mega-menu.jpg" alt="" />
                           </a>
-                          <h3 className="megamenu-single-title">Şimdi Başla</h3>
+                          <h3 className="megamenu-single-title">
+                            JOIN THE LAYERING GANG
+                          </h3>
                           <h4 className="megamenu-single-subtitle">
-                            asdasdasdsa
+                            Suspendisse faucibus nunc et pellentesque
                           </h4>
                           <a
                             href="#"
                             className="megamenu-single-button btn btn-sm"
                           >
-                            Alışverişe Başla
+                            Shop Now
                           </a>
                         </div>
                       </div>
@@ -185,7 +190,10 @@ const Header = () => {
                 <a href="account.html" className="header-account">
                   <i className="bi bi-person"></i>
                 </a>
-                <button className="search-button">
+                <button
+                  className="search-button"
+                  onClick={() => setIsSearchShow(true)}
+                >
                   <i className="bi bi-search"></i>
                 </button>
                 <a href="#">
