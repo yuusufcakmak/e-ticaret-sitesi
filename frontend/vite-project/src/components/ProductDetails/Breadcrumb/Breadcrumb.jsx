@@ -9,12 +9,12 @@ const Breadcrumb = () => {
             <a href="#">Ana Sayfa</a>
           </li>
           <li>
-            <a href="#">Erkek</a>
+            <a href="#">Kadın</a>
           </li>
           <li>
-            <a href="#">Pantolon</a>
+            <a href="#">Ceket</a>
           </li>
-          <li>Jogger Eşofman Altı</li>
+          <li>Gri Çizgili Ceket</li>
         </ul>
       </nav>
     </div>

@@ -14,9 +14,10 @@ const Header = ({ setIsSearchShow }) => {
       <div className="global-notification">
         <div className="container">
           <p>
-            SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL
-            DELIVERY - OFF 50%!
-            <a href="shop.html"> SHOP NOW</a>
+            BÜYÜK YAZ KAMPANYASI: TÜM ÜRÜNLERDE %50'YE VARAN İNDİRİMLER VE
+            ÜCRETSİZ HIZLI TESLİMAT! BU FIRSATI KAÇIRMAYIN, ALIŞVERİŞİN TADINI
+            ÇIKARIN!
+            <a href="shop.html"> ALIŞVERİŞE BAŞLA</a>
           </p>
         </div>
       </div>
@@ -39,7 +40,7 @@ const Header = ({ setIsSearchShow }) => {
                       to={"/"}
                       className={`menu-link ${pathname === "/" && "active"}`}
                     >
-                      Home
+                      Ana Sayfa
                       <i className="bi bi-chevron-down"></i>
                     </Link>
                     <div className="menu-dropdown-wrapper">
@@ -81,46 +82,12 @@ const Header = ({ setIsSearchShow }) => {
                         pathname === "/shop" && "active"
                       }`}
                     >
-                      Shop
+                      ÜRÜNLER
                       <i className="bi bi-chevron-down"></i>
                     </Link>
                     <div className="menu-dropdown-wrapper">
                       <div className="menu-dropdown-megamenu">
                         <div className="megamenu-links">
-                          <div className="megamenu-products">
-                            <h3 className="megamenu-products-title">
-                              Shop Style
-                            </h3>
-                            <ul className="megamenu-menu-list">
-                              <li>
-                                <a href="#">Shop Standard</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Full</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Only Categories</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Image Categories</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Sub Categories</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop List</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 1</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 2</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 3</a>
-                              </li>
-                            </ul>
-                          </div>
                           <div className="megamenu-products">
                             <h3 className="megamenu-products-title">
                               Filter Layout
@@ -171,7 +138,7 @@ const Header = ({ setIsSearchShow }) => {
                             <img src="/img/mega-menu.jpg" alt="" />
                           </a>
                           <h3 className="megamenu-single-title">
-                            JOIN THE LAYERING GANG
+                            Tıkla ve Başla
                           </h3>
                           <h4 className="megamenu-single-subtitle">
                             Suspendisse faucibus nunc et pellentesque
@@ -180,7 +147,7 @@ const Header = ({ setIsSearchShow }) => {
                             href="#"
                             className="megamenu-single-button btn btn-sm"
                           >
-                            Shop Now
+                            Devam Et...
                           </a>
                         </div>
                       </div>
@@ -203,7 +170,7 @@ const Header = ({ setIsSearchShow }) => {
                         pathname === "/contact" && "active"
                       }`}
                     >
-                      Contact
+                      BİZE ULAŞIN
                     </Link>
                   </li>
                 </ul>
