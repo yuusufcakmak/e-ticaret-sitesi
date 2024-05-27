@@ -1,71 +1,53 @@
-import { useContext, useState } from "react";
-import { CartContext } from "../../context/CartProvider";
+import { createContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-const CartTotals = () => {
-  const [fastCargoChecked, setFastCargoChecked] = useState(false);
-  const { cartItems } = useContext(CartContext);
+export const CartContext = createContext();
 
-  const cartItemTotals = cartItems.map((item) => {
-    const itemTotal = item.price.newPrice * item.quantity;
+const CartProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState(
+    localStorage.getItem("cartItems")
+      ? JSON.parse(localStorage.getItem("cartItems"))
+      : []
+  );
 
-    return itemTotal;
-  });
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
-  const subTotals = cartItemTotals.reduce((previousValue, currentValue) => {
-    return previousValue + currentValue;
-  }, 0);
+  const addToCart = (cartItem) => {
+    // setCartItems([...cartItems, cartItem]); 1. yol
+    setCartItems((prevCart) => [
+      ...prevCart,
+      {
+        ...cartItem,
+        quantity: cartItem.quantity ? cartItem.quantity : 1,
+      },
+    ]);
+  };
 
-  const cargoFee = 15;
+  const removeFromCart = (itemId) => {
+    const filteredCartItems = cartItems.filter((cartItem) => {
+      return cartItem.id !== itemId;
+    });
 
-  const cartTotals = fastCargoChecked
-    ? (subTotals + cargoFee).toFixed(2)
-    : subTotals.toFixed(2);
+    setCartItems(filteredCartItems);
+  };
 
   return (
-    <div className="cart-totals">
-      <h2>Cart totals</h2>
-      <table>
-        <tbody>
-          <tr className="cart-subtotal">
-            <th>Subtotal</th>
-            <td>
-              <span id="subtotal">${subTotals.toFixed(2)}</span>
-            </td>
-          </tr>
-          <tr>
-            <th>Shipping</th>
-            <td>
-              <ul>
-                <li>
-                  <label>
-                    Fast Cargo: $15.00
-                    <input
-                      type="checkbox"
-                      id="fast-cargo"
-                      checked={fastCargoChecked}
-                      onChange={() => setFastCargoChecked(!fastCargoChecked)}
-                    />
-                  </label>
-                </li>
-                <li>
-                  <a href="#">Change Address</a>
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th>Total</th>
-            <td>
-              <strong id="cart-total">${cartTotals}</strong>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="checkout">
-        <button className="btn btn-lg">Proceed to checkout</button>
-      </div>
-    </div>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
   );
 };
 
-export default CartTotals;
+export default CartProvider;
+
+CartProvider.propTypes = {
+  children: PropTypes.node,
+};
