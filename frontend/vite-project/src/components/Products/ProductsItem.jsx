@@ -1,7 +1,7 @@
 import "./ProductItem.css";
 const ProductItem = () => {
   return (
-    <li className="product-item glide__slide glide__slide--active">
+    <div className="product-item glide__slide glide__slide--active">
       <div className="product-image">
         <a href="#">
           <img src="img/products/product1/1.png" alt="" className="img1" />
@@ -10,7 +10,7 @@ const ProductItem = () => {
       </div>
       <div className="product-info">
         <a href="$" className="product-title">
-          Analogue Resin Strap
+          Ceket
         </a>
         <ul className="product-star">
           <li>
@@ -33,7 +33,7 @@ const ProductItem = () => {
           <strong className="new-price">108.00</strong>
           <span className="old-price">165.00</span>
         </div>
-        <span className="product-discount">-22%</span>
+        <span className="product-discount">%22</span>
         <div className="product-links">
           <button className="add-to-cart">
             <i className="bi bi-basket-fill"></i>
@@ -49,7 +49,7 @@ const ProductItem = () => {
           </a>
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 
