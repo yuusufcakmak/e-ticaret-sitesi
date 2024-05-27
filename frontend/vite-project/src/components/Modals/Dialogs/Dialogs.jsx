@@ -2,6 +2,11 @@ import "./Dialogs.css";
 import Proptypes from "prop-types";
 
 const Dialog = ({ isDialogShow, setIsDialogShow }) => {
+  const handleCloseDialog = (event) => {
+    const checked = event.target.checked;
+    localStorage.setItem("dialog", JSON.stringify(!checked));
+  };
+
   return (
     <div className={`modal-dialog ${isDialogShow ? "show" : ""}`}>
       <div className="modal-content">
@@ -23,7 +28,7 @@ const Dialog = ({ isDialogShow, setIsDialogShow }) => {
               <input type="text" placeholder="E-mail Adresinizi giriniz." />
               <button className="btn btn-primary">Abone Ol</button>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" onChange={handleCloseDialog} />
                 <span>Bu açılır pencereyi bir daha gösterme</span>
               </label>
             </form>
