@@ -22,7 +22,7 @@ const Footer = () => {
                       type="text"
                       placeholder="e-mail adresinizi giriniz."
                     />
-                    <button className="btn">Subscribe</button>
+                    <button className="btn">Abone Ol</button>
                   </form>
                   <p className="privacy-text">Abonelik hakları saklıdır. </p>
                 </div>
