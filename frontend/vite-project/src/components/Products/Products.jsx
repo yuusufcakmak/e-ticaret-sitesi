@@ -62,12 +62,12 @@ const Products = () => {
       <div className="container">
         <div className="section-title">
           <h2>Yeni Sezon</h2>
-          <p>Yeni Sezon Yeni Ürünler</p>
+          <p>Yaz Sezonu Yeni Ürünler...</p>
         </div>
         <div className="product-wrapper product-carousel">
           <Slider {...sliderSettings}>
             {products.map((product) => (
-              <ProductItem product={product} key={product.id} />
+              <ProductItem productItem={product} key={product.id} />
             ))}
           </Slider>
         </div>

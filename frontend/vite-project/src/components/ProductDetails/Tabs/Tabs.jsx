@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Reviews from "../../Reviews/Reviews";
+import Reviews from "../../Rewiews/Reviews";
 import "./Tabs.css";
 
 const Tabs = () => {
