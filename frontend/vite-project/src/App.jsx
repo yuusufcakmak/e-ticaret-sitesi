@@ -10,6 +10,7 @@ function App() {
     <React.Fragment>
       <HomePage />
       <AuthPage />
+
       <MdContactPage />
     </React.Fragment>
   );
