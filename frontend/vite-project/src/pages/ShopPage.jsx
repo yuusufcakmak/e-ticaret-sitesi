@@ -1,17 +1,7 @@
-import { Fragment } from "react";
-import Categories from "../components/Categories/Categories";
-import Products from "../components/Products/Products";
-import CampaignSingle from "../components/CampaignSingle/CampaignSingle";
+import ProductDetails from "../components/ProductDetails/ProductDetails";
 
-const ShopPage = () => {
-  return (
-    <Fragment>
-      <Categories />
-      <Products />
-      <CampaignSingle />
-      <Products />
-    </Fragment>
-  );
+const ProductDetailsPage = () => {
+  return <ProductDetails />;
 };
 
-export default ShopPage;
+export default ProductDetailsPage;
