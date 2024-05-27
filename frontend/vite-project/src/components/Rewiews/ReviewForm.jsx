@@ -7,7 +7,7 @@ const ReviewForm = () => {
       </p>
       <div className="comment-form-rating">
         <label>
-          Your rating
+          Değerlendir.
           <span className="required">*</span>
         </label>
         <div className="stars">
@@ -40,14 +40,14 @@ const ReviewForm = () => {
       </div>
       <div className="comment-form-comment form-comment">
         <label htmlFor="comment">
-          Your review
+          Senin Değerlendirmen
           <span className="required">*</span>
         </label>
         <textarea id="comment" cols="50" rows="10"></textarea>
       </div>
       <div className="comment-form-author form-comment">
         <label htmlFor="name">
-          Name
+          AD
           <span className="required">*</span>
         </label>
         <input id="name" type="text" />

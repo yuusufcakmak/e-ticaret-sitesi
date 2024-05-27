@@ -42,10 +42,10 @@ const ProductItem = ({ productItem }) => {
         </ul>
         <div className="product-prices">
           <strong className="new-price">
-            ${productItem.price.newPrice.toFixed(2)}
+            {productItem.price.newPrice.toFixed(2)}₺
           </strong>
           <span className="old-price">
-            ${productItem.price.oldPrice.toFixed(2)}
+            {productItem.price.oldPrice.toFixed(2)}₺
           </span>
         </div>
         <span className="product-discount">-{productItem.discount}%</span>

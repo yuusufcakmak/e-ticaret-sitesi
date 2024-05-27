@@ -19,7 +19,7 @@ const Tabs = () => {
             className={`tab-button ${activeTab === "desc" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "desc")}
           >
-            Description
+            Ürün Hakkında
           </a>
         </li>
         <li>
@@ -28,7 +28,7 @@ const Tabs = () => {
             className={`tab-button ${activeTab === "info" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "info")}
           >
-            Additional information
+            Ek Bilgiler
           </a>
         </li>
         <li>
@@ -37,7 +37,7 @@ const Tabs = () => {
             className={`tab-button ${activeTab === "reviews" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "reviews")}
           >
-            Reviews
+            Değerlendirmeler
           </a>
         </li>
       </ul>
@@ -73,20 +73,20 @@ const Tabs = () => {
           }`}
           id="info"
         >
-          <h3>Additional information</h3>
+          <h3>Ek Bilgiler</h3>
           <table>
             <tbody>
               <tr>
-                <th>Color</th>
+                <th>Renkler</th>
                 <td>
                   <p>
-                    Apple Red, Bio Blue, Sweet Orange, Blue, Green, Pink, Black,
-                    White
+                    Elma Kırmızısı, Biyo Mavi, Tatlı Portakal, Mavi, Yeşil,
+                    Pembe, Siyah, Beyaz
                   </p>
                 </td>
               </tr>
               <tr>
-                <th>Size</th>
+                <th>Beden Aralığı</th>
                 <td>
                   <p>XXS, XS, S, M, L, XL, XXL</p>
                 </td>

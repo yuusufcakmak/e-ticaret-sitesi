@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Analogue Resin Strap",
+    "name": "Ceket",
     "price": {
       "oldPrice": 165.0,
       "newPrice": 108.0
@@ -19,7 +19,7 @@
   },
   {
     "id": 2,
-    "name": "Ridley High Waist",
+    "name": "Oduncu Gömleği",
     "price": {
       "oldPrice": 208.0,
       "newPrice": 100
@@ -36,7 +36,7 @@
   },
   {
     "id": 3,
-    "name": "Blush Beanie",
+    "name": "Düz Elbise",
     "price": {
       "oldPrice": 165.0,
       "newPrice": 38.0
@@ -53,7 +53,7 @@
   },
   {
     "id": 4,
-    "name": "Mercury Tee",
+    "name": "Tül Perde",
     "price": {
       "oldPrice": 165.0,
       "newPrice": 48.0
@@ -70,7 +70,7 @@
   },
   {
     "id": 5,
-    "name": "La Bohème Rose Gold",
+    "name": "Mavi Cepli Gömlek",
     "price": {
       "oldPrice": 165.0,
       "newPrice": 48.0

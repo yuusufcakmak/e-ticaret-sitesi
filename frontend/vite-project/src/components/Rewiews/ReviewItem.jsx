@@ -25,7 +25,7 @@ const ReviewItem = () => {
         <div className="comment-meta">
           <strong>admin</strong>
           <span>-</span>
-          <time>April 23, 2022</time>
+          <time>23 Nisan 2024</time>
         </div>
         <div className="comment-description">
           <p>

@@ -15,10 +15,10 @@ const CartItem = ({ cartItem }) => {
         ></i>
       </td>
       <td>{cartItem.name}</td>
-      <td>${cartItem.price.newPrice.toFixed(2)}</td>
+      <td>{cartItem.price.newPrice.toFixed(2)}₺</td>
       <td className="product-quantity">{cartItem.quantity}</td>
       <td className="product-subtotal">
-        ${(cartItem.price.newPrice * cartItem.quantity).toFixed(2)}
+        {(cartItem.price.newPrice * cartItem.quantity).toFixed(2)}₺
       </td>
     </tr>
   );
