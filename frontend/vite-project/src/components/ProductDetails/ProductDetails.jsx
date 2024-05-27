@@ -1,7 +1,7 @@
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
 import Gallery from "./Gallery/Gallery";
-import Info from "./Info/Info";
 import "./ProductDetails.css";
+import Info from "./Info/Info";
 import Tabs from "./Tabs/Tabs";
 
 const ProductDetails = () => {
