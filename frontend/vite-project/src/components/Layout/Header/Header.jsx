@@ -1,6 +1,6 @@
 import "./Header.css";
+import Proptypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 const Header = ({ setIsSearchShow }) => {
   return (
     <header>
@@ -215,3 +215,6 @@ const Header = ({ setIsSearchShow }) => {
 };
 
 export default Header;
+Header.propTypes = {
+  setIsSearchShow: Proptypes.func,
+};
