@@ -9,8 +9,8 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 
 import "./App.css";
-import UserPage from "./pages/Admin/UserPage";
-import CategoryPage from "./pages/Admin/Categories/CategoryPage";
+import UserPage from "./pages/admin/UserPage";
+import CategoryPage from "./pages/admin/Categories/CategoryPage";
 
 function App() {
   return (
