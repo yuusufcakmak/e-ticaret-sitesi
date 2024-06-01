@@ -16,4 +16,33 @@ router.post("/", async (req, res) => {
 }
 );
 
+// Tüm kuponları getir (read-all)
+router.get("/", async (req, res) => {
+    try {
+        const coupons = await Coupon.find()
+        res.status(200).json(coupons);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." })
+    }
+
+});
+
+// belirli bir kupon getirme (read-single)
+router.get("/:couponId", async (req, res) => {
+    try {
+        const couponId = req.params.couponId;
+
+            const coupon = await Coupon.findById(couponId);
+            if (!coupon) {
+                return res.status(404).json({ error: "Coupon not found" });  
+            }
+            res.status(200).json(coupon);
+      
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." })
+    }
+});
+
 module.exports = router;
