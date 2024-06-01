@@ -3,7 +3,7 @@ const router = express.Router();
 const bcyrpt = require("bcryptjs");
 const User = require("../models/User.js");
 const generateRandomAvatar = () => {
-    const randomAvatar = Math.floor(Math.random()*71);
+    const randomAvatar = Math.floor(Math.random() * 71);
     return `https://i.pravatar.cc/300?img=${randomAvatar}`;
 };
 
@@ -22,7 +22,7 @@ router.post("/register", async (req, res) => {
             username,
             email,
             password: hashedPassword,
-            avatar : defaultAvatar,
+            avatar: defaultAvatar,
         })
         await newUser.save();
         res.status(201).json(newUser)
@@ -31,7 +31,35 @@ router.post("/register", async (req, res) => {
         res.status(500).json({ error: "Server error." })
     }
 })
+// Kullanıcı girişi (login)
+router.post("/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await User.findOne({ email })
+        if (!user) {
+            return res.status(401).json({ error: "invalid email or password." });
+        }
 
+        const isPasswordValid = await bcyrpt.compare(password, user.password);
+        if (!isPasswordValid) {
+            return res.status(401).json({ error: "invalid email or password." });
+        }
+
+
+        res.status(200).json({
+            id: user._id,
+            email: user.email,
+            username: user.username,
+            role: user.role,
+            avatar: user.avatar,
+
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." })
+    }
+
+});
 
 
 module.exports = router;
