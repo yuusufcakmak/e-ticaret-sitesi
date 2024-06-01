@@ -15,7 +15,7 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e) => { 
     e.preventDefault();
     try {
       const response = await fetch(`${apiUrl}/api/auth/login`, {
