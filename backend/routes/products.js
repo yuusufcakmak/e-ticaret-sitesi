@@ -11,6 +11,34 @@ router.post("/", async (req, res) => {
     } catch (error) {
         console.log(error);
     }
-}
-);
-module.exports=router;
+});
+
+// Tüm üsürnleri getir (read-all)
+router.get("/", async (req, res) => {
+    try {
+        const products = await Product.find()
+        res.status(200).json(products);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." })
+    }
+
+});
+
+// belirli bir ürünü getirme (read-single)
+router.get("/:productId", async (req, res) => {
+    try {
+        const productId = req.params.productId;
+        const product = await Product.findById(productId);
+        if (!product) {
+           return res.status(404).json({ error: "Product not found" });
+        }
+        res.status(200).json(product);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." })
+    }
+});
+
+module.exports = router;
