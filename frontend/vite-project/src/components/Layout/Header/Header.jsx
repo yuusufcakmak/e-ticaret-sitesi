@@ -1,14 +1,23 @@
-import "../Header/Header.css";
+import { useContext } from "react";
+import Proptypes from "prop-types";
+import { Link, useLocation } from "react-router-dom";
+import { CartContext } from "../../../context/CartProvider";
+import "./Header.css";
 
-const Header = () => {
+const Header = ({ setIsSearchShow }) => {
+  const { cartItems } = useContext(CartContext);
+
+  const { pathname } = useLocation();
+
   return (
     <header>
       <div className="global-notification">
         <div className="container">
           <p>
-            5 AL 1 ÖDE FIRSATI TÜM TİŞÖRTLERDE
-            <br></br>
-            <a href="shop.html">ALIŞVERİŞ ZAMANI!!!</a>
+            BÜYÜK YAZ KAMPANYASI: TÜM ÜRÜNLERDE %50'YE VARAN İNDİRİMLER VE
+            ÜCRETSİZ HIZLI TESLİMAT! BU FIRSATI KAÇIRMAYIN, ALIŞVERİŞİN TADINI
+            ÇIKARIN!
+            <a href="shop.html"> ALIŞVERİŞE BAŞLA</a>
           </p>
         </div>
       </div>
@@ -19,26 +28,31 @@ const Header = () => {
               <i className="bi bi-list" id="btn-menu"></i>
             </div>
             <div className="header-left">
-              <a href="index.html" className="logo"></a>
+              <Link to={"/"} className="logo">
+                LOGO
+              </Link>
             </div>
             <div className="header-center" id="sidebar">
               <nav className="navigation">
                 <ul className="menu-list">
                   <li className="menu-list-item">
-                    <a href="index.html" className="menu-link active">
-                      Home
+                    <Link
+                      to={"/"}
+                      className={`menu-link ${pathname === "/" && "active"}`}
+                    >
+                      Ana Sayfa
                       <i className="bi bi-chevron-down"></i>
-                    </a>
+                    </Link>
                     <div className="menu-dropdown-wrapper">
                       <ul className="menu-dropdown-content">
                         <li>
-                          <a href="#">Ev Temizliği</a>
+                          <a href="#">Home Clean</a>
                         </li>
                         <li>
-                          <a href="#">Eviniz için koleksiyon</a>
+                          <a href="#">Home Collection</a>
                         </li>
                         <li>
-                          <a href="#">Minimal</a>
+                          <a href="#">Home Minimal</a>
                         </li>
                         <li>
                           <a href="#">Home Modern</a>
@@ -62,47 +76,18 @@ const Header = () => {
                     </div>
                   </li>
                   <li className="menu-list-item megamenu-wrapper">
-                    <a href="shop.html" className="menu-link">
-                      Shop
+                    <Link
+                      to={"/shop"}
+                      className={`menu-link ${
+                        pathname === "/shop" && "active"
+                      }`}
+                    >
+                      ÜRÜNLER
                       <i className="bi bi-chevron-down"></i>
-                    </a>
+                    </Link>
                     <div className="menu-dropdown-wrapper">
                       <div className="menu-dropdown-megamenu">
                         <div className="megamenu-links">
-                          <div className="megamenu-products">
-                            <h3 className="megamenu-products-title">
-                              Shop Style
-                            </h3>
-                            <ul className="megamenu-menu-list">
-                              <li>
-                                <a href="#">Shop Standard</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Full</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Only Categories</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Image Categories</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Sub Categories</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop List</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 1</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 2</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 3</a>
-                              </li>
-                            </ul>
-                          </div>
                           <div className="megamenu-products">
                             <h3 className="megamenu-products-title">
                               Filter Layout
@@ -150,31 +135,43 @@ const Header = () => {
                         </div>
                         <div className="megamenu-single">
                           <a href="#">
-                            <img src="img/mega-menu.jpg" alt="" />
+                            <img src="/img/mega-menu.jpg" alt="" />
                           </a>
-                          <h3 className="megamenu-single-title">Şimdi Başla</h3>
+                          <h3 className="megamenu-single-title">
+                            Tıkla ve Başla
+                          </h3>
                           <h4 className="megamenu-single-subtitle">
-                            asdasdasdsa
+                            Suspendisse faucibus nunc et pellentesque
                           </h4>
                           <a
                             href="#"
                             className="megamenu-single-button btn btn-sm"
                           >
-                            Alışverişe Başla
+                            Devam Et...
                           </a>
                         </div>
                       </div>
                     </div>
                   </li>
                   <li className="menu-list-item">
-                    <a href="blog.html" className="menu-link">
+                    <Link
+                      to={"/blog"}
+                      className={`menu-link ${
+                        pathname === "/blog" && "active"
+                      }`}
+                    >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li className="menu-list-item">
-                    <a href="contact.html" className="menu-link">
-                      Contact
-                    </a>
+                    <Link
+                      to={"/contact"}
+                      className={`menu-link ${
+                        pathname === "/contact" && "active"
+                      }`}
+                    >
+                      BİZE ULAŞIN
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -182,20 +179,25 @@ const Header = () => {
             </div>
             <div className="header-right">
               <div className="header-right-links">
-                <a href="account.html" className="header-account">
+                <Link to={"/auth"} className="header-account">
                   <i className="bi bi-person"></i>
-                </a>
-                <button className="search-button">
+                </Link>
+                <button
+                  className="search-button"
+                  onClick={() => setIsSearchShow(true)}
+                >
                   <i className="bi bi-search"></i>
                 </button>
                 <a href="#">
                   <i className="bi bi-heart"></i>
                 </a>
                 <div className="header-cart">
-                  <a href="cart.html" className="header-cart-link">
+                  <Link to={"/cart"} className="header-cart-link">
                     <i className="bi bi-bag"></i>
-                    <span className="header-cart-count">0</span>
-                  </a>
+                    <span className="header-cart-count">
+                      {cartItems.length}
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -207,3 +209,7 @@ const Header = () => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  setIsSearchShow: Proptypes.func,
+};
