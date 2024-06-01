@@ -11,10 +11,11 @@ router.post("/", async (req, res) => {
         await newCategory.save();
         res.status(201).json(newCategory);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ error: "Server error." })
     }
 }
-)
+);
 
 // Tüm kategorileri getir (read-all)
 router.get("/", async (req, res) => {
@@ -37,7 +38,7 @@ router.get("/:categoryId", async (req, res) => {
             res.status(200).json(category);
         } catch (error) {
             console.log(error);
-            res.status(404).json({ error: "category not found" });
+            res.status(404).json({ error: "Category not found" });
         }
 
     } catch (error) {
@@ -52,7 +53,7 @@ router.put("/:categoryId", async (req, res) => {
         const updates = req.body;
         const existingCategory = await Category.findById(categoryId);
         if (!existingCategory) {
-            return res.status(404).json({ error: "category not found" });
+            return res.status(404).json({ error: "Category not found" });
         }
         const updatedCategory = await Category.findByIdAndUpdate(categoryId, updates, { new: true });
         res.status(200).json(updatedCategory);
@@ -68,14 +69,14 @@ router.delete("/:categoryId", async (req, res) => {
         const categoryId = req.params.categoryId;
         const deletedCategory = await Category.findByIdAndDelete(categoryId);
         if (!deletedCategory) {
-            return res.status(404).json({ error: "category not found" });
+            return res.status(404).json({ error: "Category not found" });
         }
         res.status(200).json(deletedCategory);
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: "Server error." });
     }
-})
+});
 
 
 module.exports = router;
