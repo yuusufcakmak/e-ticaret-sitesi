@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const bcyrpt = require("bcryptjs");
 const User = require("../models/User.js");
+const generateRandomAvatar = () => {
+    const randomAvatar = Math.floor(Math.random()*71);
+    return `https://i.pravatar.cc/300?img=${randomAvatar}    `
+};
 
 //Kullanıcı olusturma (create-register)
 router.post("/register", async (req, res) => {
@@ -18,6 +22,7 @@ router.post("/register", async (req, res) => {
             username,
             email,
             password: hashedPassword,
+            avatar : generateRandomAvatar,
         })
         await newUser.save();
         res.status(201).json(newUser)
