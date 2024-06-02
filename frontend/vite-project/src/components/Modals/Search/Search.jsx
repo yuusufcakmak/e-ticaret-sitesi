@@ -1,123 +1,66 @@
-import PropTypes from "prop-types";
-import { message } from "antd";
 import "./Search.css";
-import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Search = ({ isSearchShow, setIsSearchShow }) => {
-  const [searchResults, setSearchResults] = useState(null);
-  const apiUrl = import.meta.env.VITE_API_BASE_URL;
-
-  const handleCloseModal = () => {
-    setIsSearchShow(false);
-    setSearchResults(null);
-  };
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    const productName = e.target[0].value;
-
-    if (productName.trim().length === 0) {
-      message.warning("Boş karakter arayamazsınız!");
-      return;
-    }
-
-    try {
-      const res = await fetch(
-        `${apiUrl}/api/products/search/${productName.trim()}`
-      );
-
-      if (!res.ok) {
-        message.error("Ürün getirme hatası!");
-        return;
-      }
-
-      const data = await res.json();
-      setSearchResults(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <div className={`modal-search ${isSearchShow ? "show" : ""} `}>
       <div className="modal-wrapper">
-        <h3 className="modal-title">Search for products</h3>
+        <h3 className="modal-title">Ürün ara</h3>
         <p className="modal-text">
-          Start typing to see products you are looking for.
+          Aradığınız ürünleri görmek için yazmaya başlayın.
         </p>
-        <form className="search-form" onSubmit={handleSearch}>
-          <input type="text" placeholder="Search a product" />
+        <form className="search-form">
+          <input type="text" placeholder="Ürün Ara..." />
           <button>
             <i className="bi bi-search"></i>
           </button>
         </form>
         <div className="search-results">
           <div className="search-heading">
-            <h3>RESULTS FROM PRODUCT</h3>
+            <h3>Arama Sonuçları</h3>
           </div>
-          <div
-            className="results"
-            style={{
-              display: `${
-                searchResults?.length === 0 || !searchResults ? "flex" : "grid"
-              }`,
-            }}
-          >
-            {!searchResults && (
-              <b
-                className="result-item"
-                style={{
-                  justifyContent: "center",
-                  width: "100%",
-                }}
-              >
-                Ürün Ara...
-              </b>
-            )}
-            {searchResults?.length === 0 && (
-              <a
-                href="#"
-                className="result-item"
-                style={{
-                  justifyContent: "center",
-                  width: "100%",
-                }}
-              >
-                😔Aradığınız Ürün Bulunamadı😔
-              </a>
-            )}
-            {searchResults?.length > 0 &&
-              searchResults?.map((resultItem) => (
-                <a href="#" className="result-item" key={resultItem._id}>
-                  <img
-                    src={resultItem.img[0]}
-                    className="search-thumb"
-                    alt=""
-                  />
-                  <div className="search-info">
-                    <h4>{resultItem.name}</h4>
-                    <span className="search-sku">SKU: PD0016</span>
-                    <span className="search-price">
-                      ${resultItem.price.current.toFixed(2)}
-                    </span>
-                  </div>
-                </a>
-              ))}
+          <div className="results">
+            <a href="#" className="result-item">
+              <img
+                src="/img/products/product1/1.png"
+                className="search-thumb"
+                alt=""
+              />
+              <div className="search-info">
+                <h4>Ceket</h4>
+                <span className="search-sku">BarkodNo: PD0016</span>
+                <span className="search-price">3500 TL</span>
+              </div>
+            </a>
+            <a href="#" className="result-item">
+              <img
+                src="/img/products/product1/1.png"
+                className="search-thumb"
+                alt=""
+              />
+              <div className="search-info">
+                <h4>Ceket</h4>
+                <span className="search-sku">BarkodNo: PD0016</span>
+                <span className="search-price">3500 TL</span>
+              </div>
+            </a>
           </div>
         </div>
         <i
           className="bi bi-x-circle"
           id="close-search"
-          onClick={handleCloseModal}
+          onClick={() => setIsSearchShow(false)}
         ></i>
       </div>
-      <div className="modal-overlay" onClick={handleCloseModal}></div>
+      <div
+        className="modal-overlay"
+        onClick={() => setIsSearchShow(false)}
+      ></div>
     </div>
   );
 };
 
 export default Search;
-
 Search.propTypes = {
   isSearchShow: PropTypes.bool,
   setIsSearchShow: PropTypes.func,
