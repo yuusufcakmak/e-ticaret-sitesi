@@ -14,8 +14,8 @@ const Header = ({ setIsSearchShow }) => {
       <div className="global-notification">
         <div className="container">
           <p>
-            200 TL DEN BASLAYAN FİYATLARA
-            <a href="shop.html"> SELİMPİRİNCS</a>
+            200 TL DEN BASLAYAN İNDİRİMLERLE
+            <a href="shop.html"> SATIN AL </a>
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@ const Header = ({ setIsSearchShow }) => {
                         pathname === "/shop" && "active"
                       }`}
                     >
-                      Shop
+                      Mağaza
                       <i className="bi bi-chevron-down"></i>
                     </Link>
                     <div className="menu-dropdown-wrapper">
@@ -82,79 +82,45 @@ const Header = ({ setIsSearchShow }) => {
                         <div className="megamenu-links">
                           <div className="megamenu-products">
                             <h3 className="megamenu-products-title">
-                              Shop Style
+                              Ürün Çeşitleri
                             </h3>
                             <ul className="megamenu-menu-list">
                               <li>
-                                <a href="#">Shop Standard</a>
+                                <a href="#">Bedavadan Biraz Pahalı</a>
                               </li>
                               <li>
-                                <a href="#">Shop Full</a>
+                                <a href="#">İndirimli Ürünler</a>
                               </li>
                               <li>
-                                <a href="#">Shop Only Categories</a>
+                                <a href="#">Çocuk 0-14</a>
                               </li>
                               <li>
-                                <a href="#">Shop Image Categories</a>
+                                <a href="#">Genç Kreasyonlar</a>
                               </li>
                               <li>
-                                <a href="#">Shop Sub Categories</a>
+                                <a href="#">Yeni Reyonlarımız</a>
                               </li>
                               <li>
-                                <a href="#">Shop List</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 1</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 2</a>
-                              </li>
-                              <li>
-                                <a href="#">Hover Style 3</a>
+                                <a href="#">Hediyelik Eşyalar</a>
                               </li>
                             </ul>
                           </div>
                           <div className="megamenu-products">
                             <h3 className="megamenu-products-title">
-                              Filter Layout
+                              Gelmesini Umduklarımız
                             </h3>
                             <ul className="megamenu-menu-list">
                               <li>
-                                <a href="#">Sidebar</a>
+                                <a href="#">Rolex Submariner</a>
                               </li>
                               <li>
-                                <a href="#">Filter Side Out</a>
+                                <a href="#">O Gemi</a>
                               </li>
                               <li>
-                                <a href="#">Filter Dropdown</a>
+                                <a href="#">Matrix Siyah Erkek Deri Kaban</a>
                               </li>
                               <li>
-                                <a href="#">Filter Drawer</a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="megamenu-products">
-                            <h3 className="megamenu-products-title">
-                              Shop Loader
-                            </h3>
-                            <ul className="megamenu-menu-list">
-                              <li>
-                                <a href="#">Shop Pagination</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Infinity</a>
-                              </li>
-                              <li>
-                                <a href="#">Shop Load More</a>
-                              </li>
-                              <li>
-                                <a href="#">Cart Modal</a>
-                              </li>
-                              <li>
-                                <a href="#">Cart Drawer</a>
-                              </li>
-                              <li>
-                                <a href="#">Cart Page</a>
+                                <a href="#">Altın ve Altın Ürünleri</a>
                               </li>
                             </ul>
                           </div>
@@ -164,16 +130,16 @@ const Header = ({ setIsSearchShow }) => {
                             <img src="/img/mega-menu.jpg" alt="" />
                           </a>
                           <h3 className="megamenu-single-title">
-                            JOIN THE LAYERING GANG
+                            SİZDE ŞIK GİYİNENLER ARASINA KATILIN
                           </h3>
                           <h4 className="megamenu-single-subtitle">
-                            Suspendisse faucibus nunc et pellentesque
+                            Sadece Bir Tık Ötenizde
                           </h4>
                           <a
                             href="#"
                             className="megamenu-single-button btn btn-sm"
                           >
-                            Shop Now
+                            Şimdi Satın Al
                           </a>
                         </div>
                       </div>
@@ -196,7 +162,7 @@ const Header = ({ setIsSearchShow }) => {
                         pathname === "/contact" && "active"
                       }`}
                     >
-                      Contact
+                      İLETİŞİM
                     </Link>
                   </li>
                 </ul>

@@ -24,10 +24,7 @@ const Contact = () => {
             <h4>Bizimle İletişime Geçin...</h4>
             <h2>Temasta Olalım</h2>
             <p>
-              In hac habitasse platea dictumst. Pellentesque viverra sem nec
-              orci lacinia, in bibendum urna mollis. Quisque nunc lacus, varius
-              vel leo a, pretium lobortis metus. Vivamus consectetur consequat
-              justo.
+              Sizinle Birebir Görüşmek Ve Mağazamıza Misafir Etmekten Gurur Duyarız.
             </p>
           </div>
           <div className="contact-elements">
@@ -77,10 +74,10 @@ const Contact = () => {
                     Lc Hakiki Fırat Üniversitesi Mühendislik Kampüsü
                   </p>
                   <a href="tel:Phone: +90 1234 567 88">
-                    Phone: +90 1234 567 88
+                    Numaramız: +90 1234 567 88
                   </a>
                   <a href="mailto:Email: ietisim@example.com">
-                    Email: iletisim@example.com
+                    Email Adresimiz: iletisim@example.com
                   </a>
                 </div>
               </div>

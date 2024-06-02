@@ -11,7 +11,7 @@ const BlogItem = () => {
           <span>25 Mayıs 2024 </span>-<span>Henüz Yorum Yok...</span>
         </div>
         <div className="blog-info-center">
-          <a href="#">Aliquam hendrerit mi metus</a>
+          <a href="#">Yenilikçi Tasarımlarımız</a>
         </div>
         <div className="blog-info-bottom">
           <a href="#">Daha fazlasını oku</a>
