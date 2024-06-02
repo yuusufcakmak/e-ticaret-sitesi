@@ -6,7 +6,7 @@ const CartTotals = () => {
   const { cartItems } = useContext(CartContext);
 
   const cartItemTotals = cartItems.map((item) => {
-    const itemTotal = item.price.newPrice * item.quantity;
+    const itemTotal = item.price * item.quantity;
 
     return itemTotal;
   });
@@ -23,22 +23,22 @@ const CartTotals = () => {
 
   return (
     <div className="cart-totals">
-      <h2>Sepet toplamı</h2>
+      <h2>Cart totals</h2>
       <table>
         <tbody>
           <tr className="cart-subtotal">
-            <th>Ara Toplam</th>
+            <th>Subtotal</th>
             <td>
-              <span id="subtotal">{subTotals.toFixed(2)}₺</span>
+              <span id="subtotal">${subTotals.toFixed(2)}</span>
             </td>
           </tr>
           <tr>
-            <th>Kargo</th>
+            <th>Shipping</th>
             <td>
               <ul>
                 <li>
                   <label>
-                    Hızlı Kargo:150₺
+                    Fast Cargo: $15.00
                     <input
                       type="checkbox"
                       id="fast-cargo"
@@ -48,21 +48,21 @@ const CartTotals = () => {
                   </label>
                 </li>
                 <li>
-                  <a href="#">Adresi Değiştir</a>
+                  <a href="#">Change Address</a>
                 </li>
               </ul>
             </td>
           </tr>
           <tr>
-            <th>Toplam</th>
+            <th>Total</th>
             <td>
-              <strong id="cart-total">{cartTotals}₺</strong>
+              <strong id="cart-total">${cartTotals}</strong>
             </td>
           </tr>
         </tbody>
       </table>
       <div className="checkout">
-        <button className="btn btn-lg">Onayla ve Devam Et.</button>
+        <button className="btn btn-lg">Proceed to checkout</button>
       </div>
     </div>
   );
