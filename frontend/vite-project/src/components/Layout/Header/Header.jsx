@@ -44,31 +44,25 @@ const Header = ({ setIsSearchShow }) => {
                     <div className="menu-dropdown-wrapper">
                       <ul className="menu-dropdown-content">
                         <li>
-                          <a href="#">Home Clean</a>
+                          <a href="#">Ev Temizliği</a>
                         </li>
                         <li>
-                          <a href="#">Home Collection</a>
+                          <a href="#">Yeni Kreasyonlar</a>
                         </li>
                         <li>
-                          <a href="#">Home Minimal</a>
+                          <a href="#">Minimal Ev Eşyaları</a>
                         </li>
                         <li>
-                          <a href="#">Home Modern</a>
+                          <a href="#">Old Money Style Ürünler</a>
                         </li>
                         <li>
-                          <a href="#">Home Parallax</a>
+                          <a href="#">Yaz Ürünleri</a>
                         </li>
                         <li>
-                          <a href="#">Home Strong</a>
+                          <a href="#">İndirimli Ürünler</a>
                         </li>
                         <li>
-                          <a href="#">Home Style</a>
-                        </li>
-                        <li>
-                          <a href="#">Home Unique</a>
-                        </li>
-                        <li>
-                          <a href="#">Home RTL</a>
+                          <a href="#">Yeni Tarzını Keşfedelim</a>
                         </li>
                       </ul>
                     </div>
