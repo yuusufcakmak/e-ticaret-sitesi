@@ -11,11 +11,14 @@ import BlogDetailsPage from "./pages/BlogDetailsPage";
 import "./App.css";
 import UserPage from "./pages/admin/UserPage";
 import CategoryPage from "./pages/admin/Categories/CategoryPage";
-import UpdateCategoryPage from "./pages/admin/Categories/UpdateCategoryPage";
+import UpdateCategoryPage from "./pages/admin/Categories/UpdateCouponPage";
 import CreateCategoryPage from "./pages/admin/Categories/CreateCategoryPage";
 import ProductPage from "./pages/admin/Products/ProductPage";
 import CreateProductPage from "./pages/admin/Products/CreateProductPage";
 import UpdateProductPage from "./pages/admin/Products/UpdateProductPage";
+import CouponPage from "./pages/admin/Coupons/CouponPage";
+import CreateCouponPage from "./pages/admin/Coupons/CreateCouponPage";
+import UpdateCouponPage from "./pages/admin/Categories/UpdateCouponPage";
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
         <Route path="products" element={<ProductPage />} />
         <Route path="products/create" element={<CreateProductPage />} />
         <Route path="products/update/:id" element={<UpdateProductPage />} />
+        <Route path="coupons" element={<CouponPage />} />
+        <Route path="coupons/create" element={<CreateCouponPage />} />
+        <Route path="coupons/update/:id" element={<UpdateCouponPage />} />
       </Route>
     </Routes>
   );
