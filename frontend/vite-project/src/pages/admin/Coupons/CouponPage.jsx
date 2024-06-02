@@ -1,106 +1,102 @@
-import { Button, Form, Input, InputNumber, Spin, message } from "antd";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Button, Popconfirm, Space, Table, message } from "antd";
+import { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const UpdateCouponPage = () => {
+const CouponPage = () => {
+  const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [form] = Form.useForm();
-  const params = useParams();
-  const couponId = params.id;
+  const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
-  const onFinish = async (values) => {
+  const columns = [
+    {
+      title: "Kupon Kodu",
+      dataIndex: "code",
+      key: "code",
+      render: (code) => <b>{code}</b>,
+    },
+    {
+      title: "İndirim Oranı",
+      dataIndex: "discountPercent",
+      key: "discountPercent",
+      render: (code) => <span>%{code}</span>,
+    },
+    {
+      title: "Actions",
+      dataIndex: "actions",
+      key: "actions",
+      render: (_, record) => (
+        <Space>
+          <Button
+            type="primary"
+            onClick={() => navigate(`/admin/coupons/update/${record._id}`)}
+          >
+            Güncelle
+          </Button>
+          <Popconfirm
+            title="Kategoriyi Sil"
+            description="Kategoriyi silmek istediğinizden emin misiniz?"
+            okText="Yes"
+            cancelText="No"
+            onConfirm={() => deleteCoupon(record._id)}
+          >
+            <Button type="primary" danger>
+              Sil
+            </Button>
+          </Popconfirm>
+        </Space>
+      ),
+    },
+  ];
+
+  const fetchCategories = useCallback(async () => {
     setLoading(true);
+
+    try {
+      const response = await fetch(`${apiUrl}/api/coupons`);
+
+      if (response.ok) {
+        const data = await response.json();
+        setDataSource(data);
+      } else {
+        message.error("Veri getirme başarısız.");
+      }
+    } catch (error) {
+      console.log("Veri hatası:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, [apiUrl]);
+
+  const deleteCoupon = async (couponId) => {
     try {
       const response = await fetch(`${apiUrl}/api/coupons/${couponId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
+        method: "DELETE",
       });
 
       if (response.ok) {
-        message.success("Kupon başarıyla güncellendi.");
+        message.success("Kupon başarıyla silindi.");
+        fetchCategories();
       } else {
-        message.error("Kupon güncellenirken bir hata oluştu.");
+        message.error("Silme işlemi başarısız.");
       }
     } catch (error) {
-      console.log("Kupon güncelleme hatası:", error);
-    } finally {
-      setLoading(false);
+      console.log("Silme hatası:", error);
     }
   };
 
   useEffect(() => {
-    const fetchSingleCategory = async () => {
-      setLoading(true);
-
-      try {
-        const response = await fetch(`${apiUrl}/api/coupons/${couponId}`);
-
-        if (!response.ok) {
-          throw new Error("Verileri getirme hatası");
-        }
-
-        const data = await response.json();
-
-        if (data) {
-          form.setFieldsValue({
-            code: data.code,
-            discountPercent: data.discountPercent,
-          });
-        }
-      } catch (error) {
-        console.log("Veri hatası:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchSingleCategory();
-  }, [apiUrl, couponId, form]);
+    fetchCategories();
+  }, [fetchCategories]);
 
   return (
-    <Spin spinning={loading}>
-      <Form
-        form={form}
-        name="basic"
-        layout="vertical"
-        autoComplete="off"
-        onFinish={onFinish}
-      >
-        <Form.Item
-          label="Kupon İsmi"
-          name="code"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen bir kupon kodu girin!",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Kupon İndirim Oranı"
-          name="discountPercent"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen bir kupon indirim oranı girin!",
-            },
-          ]}
-        >
-          <InputNumber />
-        </Form.Item>
-
-        <Button type="primary" htmlType="submit">
-          Güncelle
-        </Button>
-      </Form>
-    </Spin>
+    <Table
+      dataSource={dataSource}
+      columns={columns}
+      rowKey={(record) => record._id}
+      loading={loading}
+    />
   );
 };
 
-export default UpdateCouponPage;
+export default CouponPage;
