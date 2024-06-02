@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { CartContext } from "../../context/CartProvider";
 import { Spin, message } from "antd";
+import CartProgress from "./CartProgress";
 
 const CartTotals = () => {
   const [fastCargoChecked, setFastCargoChecked] = useState(false);
@@ -15,7 +16,6 @@ const CartTotals = () => {
 
   const cartItemTotals = cartItems.map((item) => {
     const itemTotal = item.price * item.quantity;
-
     return itemTotal;
   });
 
@@ -73,6 +73,7 @@ const CartTotals = () => {
   return (
     <div className="cart-totals">
       <h2>Sepet Tutarı</h2>
+      <CartProgress />
       <table>
         <tbody>
           <tr className="cart-subtotal">
