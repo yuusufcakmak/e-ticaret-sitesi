@@ -41,8 +41,8 @@ const Info = ({ singleProduct }) => {
         <span>2 reviews</span>
       </div>
       <div className="product-price">
-        <s className="old-price">${originalPrice.toFixed(2)}</s>
-        <strong className="new-price">${discountedPrice.toFixed(2)}</strong>
+        <s className="old-price">{originalPrice.toFixed(2)}₺</s>
+        <strong className="new-price">{discountedPrice.toFixed(2)}₺</strong>
       </div>
       <div
         className="product-description"

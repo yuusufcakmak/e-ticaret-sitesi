@@ -48,8 +48,8 @@ const ProductItem = ({ productItem }) => {
           </li>
         </ul>
         <div className="product-prices">
-          <strong className="new-price">${discountedPrice.toFixed(2)}</strong>
-          <span className="old-price">${originalPrice.toFixed(2)}</span>
+          <strong className="new-price">{discountedPrice.toFixed(2)}₺</strong>
+          <span className="old-price">{originalPrice.toFixed(2)}₺</span>
         </div>
         <span className="product-discount">-{productItem.price.discount}%</span>
         <div className="product-links">

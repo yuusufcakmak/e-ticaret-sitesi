@@ -103,7 +103,7 @@ const Search = ({ isSearchShow, setIsSearchShow }) => {
                     <h4>{resultItem.name}</h4>
                     <span className="search-sku">SKU: PD0016</span>
                     <span className="search-price">
-                      ${resultItem.price.current.toFixed(2)}
+                      {resultItem.price.current.toFixed(2)}₺
                     </span>
                   </div>
                 </Link>

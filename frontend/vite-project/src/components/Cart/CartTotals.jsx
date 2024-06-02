@@ -78,7 +78,7 @@ const CartTotals = () => {
           <tr className="cart-subtotal">
             <th>Subtotal</th>
             <td>
-              <span id="subtotal">${subTotals.toFixed(2)}</span>
+              <span id="subtotal">{subTotals.toFixed(2)}₺</span>
             </td>
           </tr>
           <tr>
@@ -87,7 +87,7 @@ const CartTotals = () => {
               <ul>
                 <li>
                   <label>
-                    Fast Cargo: $15.00
+                    Fast Cargo: 15.00₺
                     <input
                       type="checkbox"
                       id="fast-cargo"
@@ -105,7 +105,7 @@ const CartTotals = () => {
           <tr>
             <th>Total</th>
             <td>
-              <strong id="cart-total">${cartTotals}</strong>
+              <strong id="cart-total">{cartTotals}₺</strong>
             </td>
           </tr>
         </tbody>
