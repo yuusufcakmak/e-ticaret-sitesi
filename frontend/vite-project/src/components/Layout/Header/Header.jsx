@@ -14,9 +14,8 @@ const Header = ({ setIsSearchShow }) => {
       <div className="global-notification">
         <div className="container">
           <p>
-            SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL
-            DELIVERY - OFF 50%!
-            <a href="shop.html"> SHOP NOW</a>
+            200 TL DEN BASLAYAN FİYATLARA
+            <a href="shop.html"> SELİMPİRİNCS</a>
           </p>
         </div>
       </div>
@@ -39,7 +38,7 @@ const Header = ({ setIsSearchShow }) => {
                       to={"/"}
                       className={`menu-link ${pathname === "/" && "active"}`}
                     >
-                      Home
+                      Ana Sayfa
                       <i className="bi bi-chevron-down"></i>
                     </Link>
                     <div className="menu-dropdown-wrapper">
