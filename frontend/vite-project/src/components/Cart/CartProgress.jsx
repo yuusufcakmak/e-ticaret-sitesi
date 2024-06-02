@@ -18,14 +18,15 @@ const CartProgress = () => {
     <div className="free-progress-bar">
       <p className="progress-bar-title">
         {remainingAmount > 0 ? (
-          <>
+          <b>
+            {" "}
             Sepete <strong>{remainingAmount.toFixed(2)} TL</strong> daha ekle
             kargon bedava olsun!
-          </>
+          </b>
         ) : (
-          <>
+          <b>
             Kargon <strong>bedava!</strong>
-          </>
+          </b>
         )}
       </p>
       <div className="progress-bar">
