@@ -43,12 +43,12 @@ const DashboardPage = () => {
         </Col>
         <Col span={8}>
           <Card>
-            <Statistic title="Toplam Gelir" value={3000} prefix="$" />
+            <Statistic title="Toplam Gelir" value={300000} prefix="$" />
           </Card>
         </Col>
       </Row>
       <Card style={{ marginTop: "20px" }}>
-        <h2>Son Aydaki Ürün Satış Artışı</h2>
+        <h2>Son Aylardaki Ürün Satış Artışı</h2>
         <LineChart
           width={600}
           height={600}
@@ -69,7 +69,7 @@ const DashboardPage = () => {
         </LineChart>
       </Card>
       <Card style={{ marginTop: "20px" }}>
-        <h2>Son Aydaki Müşteri Artışı</h2>
+        <h2>Son Aylardaki Müşteri Artışı</h2>
         <LineChart
           width={600}
           height={300}
