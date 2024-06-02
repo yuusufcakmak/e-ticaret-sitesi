@@ -9,7 +9,7 @@ const CampaignItem = () => {
         Alışveriş Hastaları
       </h3>
       <p className="campaign-desc">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit dolor
+        İndirimli, Şık ve Etkileyici. Neden Satın Almıyorsun?
       </p>
       <a href="#" className="btn btn-primary">
         Tümünü Görüntüle
