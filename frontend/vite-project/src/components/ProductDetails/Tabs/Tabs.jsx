@@ -20,7 +20,7 @@ const Tabs = ({ singleProduct, setSingleProduct }) => {
             className={`tab-button ${activeTab === "desc" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "desc")}
           >
-            Description
+            Ürün Açıklaması
           </a>
         </li>
         <li>
@@ -29,7 +29,7 @@ const Tabs = ({ singleProduct, setSingleProduct }) => {
             className={`tab-button ${activeTab === "info" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "info")}
           >
-            Additional information
+            Ek Bilgiler
           </a>
         </li>
         <li>
@@ -38,7 +38,7 @@ const Tabs = ({ singleProduct, setSingleProduct }) => {
             className={`tab-button ${activeTab === "reviews" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "reviews")}
           >
-            Reviews
+            Yorumlar
           </a>
         </li>
       </ul>
@@ -59,11 +59,11 @@ const Tabs = ({ singleProduct, setSingleProduct }) => {
           }`}
           id="info"
         >
-          <h3>Additional information</h3>
+          <h3>Ek Bilgiler</h3>
           <table>
             <tbody>
               <tr>
-                <th>Color</th>
+                <th>Renk</th>
                 <td>
                   <p>
                     Apple Red, Bio Blue, Sweet Orange, Blue, Green, Pink, Black,
@@ -72,7 +72,7 @@ const Tabs = ({ singleProduct, setSingleProduct }) => {
                 </td>
               </tr>
               <tr>
-                <th>Size</th>
+                <th>Beden</th>
                 <td>
                   <p>
                     {singleProduct.sizes.map((item, index) => (
