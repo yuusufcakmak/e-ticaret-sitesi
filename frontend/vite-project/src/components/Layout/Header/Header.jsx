@@ -31,7 +31,7 @@ const Header = ({ setIsSearchShow }) => {
             </div>
             <div className="header-left">
               <Link to={"/"} className="logo">
-                LOGO
+                LCHAKİKİ
               </Link>
             </div>
             <div className="header-center" id="sidebar">
