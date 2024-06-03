@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./CategoryItem.css";
 
 const CategoryItem = ({ category }) => {
   return (
     <li className="category-item">
-      <a href="#">
-        <img src={category.img} alt="" className="category-image" />
+      <Link to={`/category/${category._id}`}>
+        <img
+          src={category.img}
+          alt={category.name}
+          className="category-image"
+        />
         <span className="category-title">{category.name}</span>
-      </a>
+      </Link>
     </li>
   );
 };
@@ -15,5 +20,5 @@ const CategoryItem = ({ category }) => {
 export default CategoryItem;
 
 CategoryItem.propTypes = {
-  category: PropTypes.object,
+  category: PropTypes.object.isRequired,
 };

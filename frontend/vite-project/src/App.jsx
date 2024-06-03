@@ -22,6 +22,7 @@ import UpdateCouponPage from "./pages/admin/Categories/UpdateCategoryPage";
 import Success from "./pages/Success";
 import OrderPage from "./pages/admin/OrderPage";
 import DashboardPage from "./pages/admin/DashboardPage";
+import Categories from "./components/Categories/Categories";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path="/shop" element={<ShopPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/categories" component={Categories} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/auth" element={<AuthPage />} />
       <Route path="/product/:id" element={<ProductDetailsPage />} />
