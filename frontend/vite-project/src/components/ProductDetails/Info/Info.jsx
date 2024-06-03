@@ -99,7 +99,7 @@ const Info = ({ singleProduct }) => {
                 })
               }
             >
-              Add to cart
+              Sepete Ekle
             </button>
           </div>
           <div className="product-extra-buttons">
