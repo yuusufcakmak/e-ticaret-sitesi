@@ -14,8 +14,12 @@ const Header = ({ setIsSearchShow }) => {
       <div className="global-notification">
         <div className="container">
           <p>
-            200 TL DEN BASLAYAN İNDİRİMLERLE
-            <a href="shop.html"> SATIN AL </a>
+            SİZE ÖZEL İNDİRİM KUPONLARI VE AVANTAJLI FİYATLAR
+            <a href="/shop">
+              {" "}
+              <br></br>
+              ÜRÜNLERE BİR GÖZ AT İSTERSEN{" "}
+            </a>
           </p>
         </div>
       </div>
