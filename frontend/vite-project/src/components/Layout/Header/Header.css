@@ -18,12 +18,14 @@ header {
   display: block;
   max-width: 100%;
   height: auto;
+  text-align: center;
 }
 
 .header-left .logo img {
   display: block;
-  max-width: 70%;
+  max-width: 65%;
   height: auto;
+  margin-left: -10px;
 }
 
 @media screen and (max-width: 768px) {

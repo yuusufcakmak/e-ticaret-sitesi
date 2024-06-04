@@ -30,8 +30,11 @@ const Header = ({ setIsSearchShow }) => {
               <i className="bi bi-list" id="btn-menu"></i>
             </div>
             <div className="header-left">
-              <Link to={"/"} className="logo">
-                LCHAKİKİ
+              <Link to="/" className="logo">
+                <img
+                  src="../../../../public/img/logo.png"
+                  alt="LCHAKİKİ Logo"
+                />
               </Link>
             </div>
             <div className="header-center" id="sidebar">
