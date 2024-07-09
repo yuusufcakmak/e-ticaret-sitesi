@@ -34,10 +34,10 @@ const CouponPage = () => {
             Güncelle
           </Button>
           <Popconfirm
-            title="Kategoriyi Sil"
-            description="Kategoriyi silmek istediğinizden emin misiniz?"
-            okText="Yes"
-            cancelText="No"
+            title="Kuponu Sil"
+            description="Kuponu silmek istediğinizden emin misiniz?"
+            okText="Evet"
+            cancelText="Hayır"
             onConfirm={() => deleteCoupon(record._id)}
           >
             <Button type="primary" danger>
